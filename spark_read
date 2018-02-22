@@ -1,0 +1,33 @@
+import findspark
+findspark.init()
+import pyspark
+
+sc = pyspark.SparkContext(appName="read-big-file")
+
+
+from pyspark.sql import SparkSession
+
+spark = SparkSession \
+    .builder \
+    .getOrCreate()
+
+
+df = spark.read.format("com.databricks.spark.csv") \
+    .option("header", "false").option("inferSchema", "true") \
+    .option("delimiter", '|').load("file:///d:/tmp/iholding/issueholding.txt")
+
+df.printSchema()
+
+# When we do a groupbykey each field gets output except the key field,
+# therefore we add an "issue" field on to the end of the dataframe that's a copy of the 
+# second field (the one we want to key on) so that all of the original fields 
+# get output when we do the groupbykey
+
+newdf = df.withColumn("issue", df[1])
+
+
+newdf.write.partitionBy("issue") \
+    .format("com.databricks.spark.csv") \
+    .option("header", "false") \
+    .option("delimiter", '|').save("d://tmp/myfiles")
+
