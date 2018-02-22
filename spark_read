@@ -66,10 +66,10 @@ df.show(10)
 
 
 
-# When we do a groupbykey each field gets output except the key field,
+# When we do a partitionbykey each field gets output except the key field,
 # therefore we add an "issue" field on to the end of the dataframe that's a copy of the 
-# second field (the one we want to key on) so that all of the original fields 
-# get output when we do the groupbykey
+# second field (the one we want to partition on) so that all of the original fields 
+# get output when we do the partitioning
 
 newdf = df.withColumn("period", df[1])
 
