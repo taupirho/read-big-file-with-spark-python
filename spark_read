@@ -1,3 +1,11 @@
+#
+# NB might need to pip install findspark, pyspark first
+# Required to allow pyspark to run inside Jupyter
+#
+# At the time of writing, pyspark does not work with python 3.6
+# therefore using version 3.5.2 
+#
+
 import findspark
 findspark.init()
 import pyspark
