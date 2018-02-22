@@ -21,8 +21,8 @@ holds approximately 335 Million pipe separated records. The first 10 records are
 
 The second field in the above file can range between 1 and 56 and the goal was to split
 up the original file so that all the records with the same value for the second field would be 
-grouped together in the same file. i.e we would end up with 56 separate files, issue1.txt, 
-issue2.txt ... issue56.txt each containing approximately 6 million records.
+grouped together in the same file. i.e we would end up with 56 separate files, period1.txt, 
+period2.txt ... period56.txt each containing approximately 6 million records.
 
 I ran this on a Windows 7 PC with 16Gbytes of ram using python version 3.5,
 pyspark 2.1 and a Jupyter notebook. I used the same "big file" as was used in my 
