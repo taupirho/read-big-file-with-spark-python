@@ -1,4 +1,4 @@
-# read-big-file-with-spark
+# read-big-file-with-spark-python
 We try to read the same big file (24 Gbytes) we read before with python but 
 this time using Spark. It won't be a true test as we are only running this 
 on my local PC not on a proper cluster. Just thought it would be interesting
