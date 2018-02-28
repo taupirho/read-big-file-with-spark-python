@@ -2,10 +2,10 @@
 The second of a three part case study in reading a big (21GB) text file using C, Python, PYSPARK and Spark-Scala.
 This part deals with using Pyspark for our processing
 
-We try to read the same big file (24 Gbytes) we read before with python but 
+We try to read the same big file (21 Gbytes) we read before with python but 
 this time using Spark. It won't be a true test as we are only running this 
 on my local PC not on a proper cluster. Just thought it would be interesting
-to try it out. Just to recap, the data file is about 24 Gigabtyes long and 
+to try it out. Just to recap, the data file is about 21 Gigabtyes long and 
 holds approximately 335 Million pipe separated records. The first 10 records are shown below:
 
 ```
