@@ -6,7 +6,7 @@ We try to read the same big file (21 Gbytes) we read before with python but
 this time using Spark. It won't be a true test as we are only running this 
 on my local PC not on a proper cluster. Just thought it would be interesting
 to try it out. Just to recap, the data file is about 21 Gigabtyes long and 
-holds approximately 335 Million pipe separated records. The first 10 records are shown below:
+holds approximately 366 Million pipe separated records. The first 10 records are shown below:
 
 ```
 18511|1|2587198|2004-03-31|0|100000|0|1.97|0.49988|100000||||
@@ -34,4 +34,18 @@ other repository - read-big-file-with-python.
 The job took 37 minutes to complete but bear in mind there would still have to be a 
 bit of post processing to be done to collect all the disparate files together. This 
 compares with the 18 minutes it took to process the same file using just python 3.6 
-on the same PC and the 54 minutes it took a C program to process it on an HP Alpha box
+on the same PC and the 54 minutes it took a C program to process it on an HP Alpha box.
+
+Over time this case study morphed into 5 parts. You can read the others here:
+
+[part1](https://github.com/taupirho/read-big-file-with-python)
+<br>
+[part3](https://github.com/taupirho/read-big-file-with-spark-scala)
+<br>
+[part4](https://github.com/taupirho/read-big-file-with-amazon-emr)
+<br>
+[part5](https://github.com/taupirho/read-big-file-aws-athena-glue)
+
+
+
+
